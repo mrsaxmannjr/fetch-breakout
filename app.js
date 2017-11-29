@@ -1,12 +1,25 @@
-// var baseUrl =  'https://drageons.herokuapp.com/character/1'
-// var baseUrl =  'http://pokeapi.co/api/v2/pokemon/5'
-var baseUrl =  'http://dnd5eapi.co/api/spells'
+// GET Request
+// Request to get info from an api
+// Different API endpoints - locations/addresses for data
 
-fetch(baseUrl)
+var baseUrl = "https://swapi.co/api/";
+
+//First arg is url you want data from
+// REquest it
+// Get it
+// Translate it from "string"
+// Work with it
+
+fetch(baseUrl + "people")
   .then(response => {
-    console.log(response);
-    return response.json()
+    return response.json();
   })
   .then(response => {
-    console.log(response[0]);
+    console.log(response.results[0]);
+    // DOM manipulation
   })
+  .catch(error => {
+    console.log(error);
+
+    // DOM manip to express error
+  });
